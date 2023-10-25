@@ -1,0 +1,16 @@
+#game-container {
+    width: 400px;
+    height: 400px;
+    background-color: skyblue;
+    position: relative;
+}
+
+#bird {
+    width: 50px;
+    height: 50px;
+    background-color: yellow;
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+}
