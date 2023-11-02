@@ -11,7 +11,7 @@ public class BioskopWithScanner02 {
         
         while (true) {
            System.out.println("Menu: ");
-           System.out.println("1. Input adta penonton");
+           System.out.println("1. Input data penonton");
            System.out.println("2. Tampilkan daftar penonton");
            System.out.println("3. Exit");
            System.out.print("Pilih menu (1/2/3)");
@@ -23,22 +23,29 @@ public class BioskopWithScanner02 {
             case 1:
                 System.out.print("Masukkan nama: ");
                 nama = sc.nextLine();
-                System.out.print("Masukkan baris (1-4): ");
-                baris = sc.nextInt();
-                System.out.print("Masukkan kolom (1/2): "); 
-                kolom = sc.nextInt();
-                sc.nextLine();
+                
+                boolean kursiTersedia = false;
 
-                if (baris >= 1 && baris <= 4 && (kolom == 1 || kolom == 2)) {
-                    if (penonton[baris - 1][kolom - 1] == null) {
-                        penonton[baris - 1][kolom - 1] = nama;
-                        System.out.println("Data penonton berhasil diinputkan.");
+                do {
+                    System.out.print("Masukkan baris (1-4): ");
+                    baris = sc.nextInt();
+                    System.out.print("Masukkan kolom (1/2): ");
+                    kolom = sc.nextInt();
+                    sc.nextLine();
+
+                    if (baris >= 1 && baris <= 4 && (kolom == 1 || kolom == 2)) {
+                        if (penonton[baris - 1][kolom - 1] == null) {
+                            penonton[baris - 1][kolom - 1] = nama;
+                            System.out.println("Data penonton berhasil diinputkan. ");
+                            kursiTersedia = true;
+                        } else {
+                            System.out.println("Kursi sudah ditempati oleh penonton lain. Silahkan pilih kursi lain. ");
+                        }
                     } else {
-                        System.out.println("Kursi sudah ditempati olrh penonton lain.");
-                    }
-                } else {
-                    System.out.println("Baris atau kolom tidak valid.");
-                }
+                        System.out.println("Baris atau kolom tidak valid. Silahkan pilih ulang. ");
+                    } 
+                } while (!kursiTersedia);
+                break;
             
                 case 2:
                     System.out.println("Daftar penonton: ");
@@ -46,7 +53,8 @@ public class BioskopWithScanner02 {
                         for (int j = 0; j < 2; j++) {
                             if (penonton[i][j] != null) {
                                 System.out.println("Baris " + (i + 1) + ", kolom " + (j + 1) + ": " + penonton[i][j]);
-                            }
+                            } 
+                            
                         }
                     }
                     break;
