@@ -8,7 +8,7 @@ public class Square {
         for (int i = 1; i <= N; i++){
             System.out.print("*");
         }
-        for (int iOuter = 1; iOuter<=N; iOuter++) {
+        for (int iOuter = 0; iOuter<=N; iOuter++) {
             for (int i = 1; i <= N; i++) {
                 System.out.print("*");
             }
