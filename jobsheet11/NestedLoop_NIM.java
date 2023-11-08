@@ -23,12 +23,24 @@ public class NestedLoop_NIM {
         //}
     
     // output data menggunakan foreach
-    for (int i = 0; i < array2D.length; i++) {
-        System.out.print("Kota ke-" + i + ": ");
-        for (int value : array2D[i]) {
-            System.out.print(value + " ");
+    // for (int i = 0; i < array2D.length; i++) {
+        // System.out.print("Kota ke-" + i + ": ");
+        // for (int value : array2D[i]) {
+            // System.out.print(value + " ");
+        // }
+        // System.out.println();
+    // }
+            
+        // output data dan rata-rata
+        for (int i = 0; i < array2D.length; i++) {
+            System.out.print("Kota ke-" + i + ": ");
+            int total = 0;
+            for (int value : array2D[i]) {
+                System.out.print(value + " ");
+                total += value;
+            }
+            double rataRata = (double) total / array2D[i].length;
+            System.out.println("Rata-rata: " + rataRata);
         }
-        System.out.println();
-    }
     }
 }
