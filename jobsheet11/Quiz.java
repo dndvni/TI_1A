@@ -19,9 +19,14 @@ public class Quiz {
             }
             int answer = input.nextInt();
             input.nextLine();
-            success = (answer == number);
-            if (!success) {
-                System.out.println("Tebakan salah. Silahkan coba lagi. ");
+           
+            if (answer < number) {
+                System.out.println("Angka yang Anda tebak terlalu kecil. ");
+            } else if (answer > number) {
+                System.out.println("Angka yang Anda tebak terlalu besar. ");
+            } else {
+                System.out.println("Tebakan benar!");
+                success = true;
             }
         } while (!success);
 
