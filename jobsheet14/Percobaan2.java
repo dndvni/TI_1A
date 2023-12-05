@@ -2,10 +2,16 @@ import java.util.Scanner;
 
 public class Percobaan2 {
     static int hitungPangkat(int x, int y) {
-        if(y== 0) {
+        if (y== 0) {
             return (1);
         } else {
-            return (x * hitungPangkat(x, y - 1));
+            System.out.print(x);
+            if (y != 1) {
+                System.out.print("x");
+            } else {
+                System.out.print("x1 = ");
+            }
+            return ( x * hitungPangkat(x, y - 1));
         }
     }
 
@@ -14,7 +20,7 @@ public class Percobaan2 {
 
         System.out.print("Bilangan yang dihitung: ");
         int bilangan = sc02.nextInt();
-        System.out.print("Pangkat: ");
+        System.out.print("pangkat: ");
         int pangkat = sc02.nextInt();
 
         System.out.println(hitungPangkat(bilangan, pangkat));
