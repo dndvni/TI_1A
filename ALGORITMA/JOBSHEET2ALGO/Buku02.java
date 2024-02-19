@@ -6,7 +6,7 @@ public class Buku02{
     String judul, pengarang;
     int halaman, stok, harga;
 
-    // Method Buku
+        // Method Buku
     void tampilInformasi() {
         System.out.println("Judul: " + judul);
         System.out.println("Pengarang: " + pengarang);
@@ -16,7 +16,7 @@ public class Buku02{
     }
 
     void terjual(int jml) {
-        if (stok > 0) {
+        if (stok > 0 && stok >= jml) {
             stok -= jml;
             System.out.println(jml + " buku telah terjual.");
         } else {
@@ -32,6 +32,21 @@ public class Buku02{
         harga = hrg;
     }
 
-    
-  
+    public static void main(String[] args) {
+        // dalam metode lain
+        Buku02 buku = new Buku02();
+        buku.judul = "Judul Buku";
+        buku.pengarang = "Pengarang";
+        buku.halaman = 120;
+        buku. stok = 70;
+        buku.harga = 40;
+
+        buku.tampilInformasi();
+        buku.terjual(81);
+        buku.restock(10);
+        buku.gantiHarga(30);
+
+        buku.tampilInformasi();
+    }
+
 }
