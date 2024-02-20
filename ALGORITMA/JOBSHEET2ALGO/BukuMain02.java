@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class BukuMain02 {
     public static void main(String[] args){
-       Buku bk1 = new Buku();
+       Buku02 bk1 = new Buku02();
        bk1.judul = "Today Ends Tomorrow Comes";
        bk1.pengarang = "Denanda Pratiwi";
        bk1.halaman = 198;
