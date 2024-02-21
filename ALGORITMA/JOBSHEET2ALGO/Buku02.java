@@ -6,6 +6,15 @@ public class Buku02{
     String judul, pengarang;
     int halaman, stok, harga;
 
+        // Konstruktor
+        public Buku02(String jud, String pg, int hal, int stok, int har) {
+            this.judul = jud;
+            this.pengarang = pg;
+            this.halaman = hal;
+            this.stok = stok;
+            this.harga = har;
+        }
+
         // Method Buku
     void tampilInformasi() {
         System.out.println("Judul: " + judul);
@@ -34,7 +43,7 @@ public class Buku02{
 
     public static void main(String[] args) {
         // dalam metode lain
-        Buku02 buku = new Buku02();
+        Buku02 buku = new Buku02("Judul Buku", "Pengarang", 120, 70, 40);
         buku.judul = "Judul Buku";
         buku.pengarang = "Pengarang";
         buku.halaman = 120;
