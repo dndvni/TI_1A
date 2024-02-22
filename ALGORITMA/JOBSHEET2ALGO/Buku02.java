@@ -24,23 +24,34 @@ public class Buku02{
         System.out.println("Pengarang: " + pengarang);
         System.out.println("Jumlah Halaman: " + halaman);
         System.out.println("Sisa stok: " + stok);
-        System.out.println("Harga: Rp" + harga);
+        System.out.println("Harga: Rp. " + harga);
     }
 
+    // Menampilkan Hasil
     void tampilHasil(){
         System.out.println("Judul: " + judul);
         System.out.println("Pengarang: " + pengarang);
         System.out.println("Halaman: " + halaman);
         System.out.println("Stok: " + stok);
-        System.out.println("Harga: Rp" + harga);
+        System.out.println("Harga: Rp. " + harga);
     }
 
+    // public void terjual(int jml) {
+        // if (stok > 0 && stok >= jml) {
+            // stok -= jml;
+            // System.out.println(jml + " buku telah terjual.");
+        // } else {
+            // System.out.println("Stok sudah habis. Tidak bisa melakukan pembelian.");
+        // }
+    // }
+
     public void terjual(int jml) {
-        if (stok > 0 && stok >= jml) {
+        if(jml < stok) {
             stok -= jml;
-            System.out.println(jml + " buku telah terjual.");
-        } else {
-            System.out.println("Stok sudah habis. Tidak bisa melakukan pembelian.");
+        } else if (stok == 0) {
+            System.out.println("Buku Telah Terjual");
+        } else if (jml > stok) {
+            System.out.println("Stok telah habis. Tidak bisa melakukan pembelian");
         }
     }
 
@@ -70,8 +81,13 @@ public class Buku02{
         stok += jml;
     }
 
-    void gantiHarga(int hrg) {
+    int gantiHarga(int hrg) {
         harga = hrg;
+        return harga;
+    }
+
+    public Buku02() {
+
     }
 
     public static void main(String[] args) {
@@ -84,9 +100,12 @@ public class Buku02{
         buku.harga = 40;
 
         buku.tampilInformasi();
+        // buku.terjual(81);
+        // buku.restock(10);
+        buku.gantiHarga(30);
+        System.out.println("Harga Buku Telah di Ubah");
         buku.terjual(81);
         buku.restock(10);
-        buku.gantiHarga(30);
 
         buku.tampilInformasi();
     }
