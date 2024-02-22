@@ -17,5 +17,11 @@ public class BukuMain02 {
        Buku02 bk2 = new Buku02("Self Reward", "Maheera Ayesha", 160, 29, 59000);
        bk2.terjual(11);
        bk2.tampilInformasi();
+
+       // Object Baru Dengan Nama menggunakan Konstruktotr Berparameter
+       Buku02 bk3 = new Buku02("Adinda Devani", "Adinda Mirza Devani", 230, 60, 70000);
+       bk3.terjual(55);
+       System.out.println();
+       bk3.tampilInformasi();
     }
 }
