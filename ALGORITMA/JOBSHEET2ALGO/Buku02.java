@@ -27,7 +27,15 @@ public class Buku02{
         System.out.println("Harga: Rp" + harga);
     }
 
-    void terjual(int jml) {
+    void tampilHasil(){
+        System.out.println("Judul: " + judul);
+        System.out.println("Pengarang: " + pengarang);
+        System.out.println("Halaman: " + halaman);
+        System.out.println("Stok: " + stok);
+        System.out.println("Harga: Rp" + harga);
+    }
+
+    public void terjual(int jml) {
         if (stok > 0 && stok >= jml) {
             stok -= jml;
             System.out.println(jml + " buku telah terjual.");
