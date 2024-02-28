@@ -1,29 +1,26 @@
 package JOBSHEET3ALGO;
-// import java.util.Scanner;
+import java.util.Scanner;
 
 public class ArrayObjects {
 
     public static void main(String[] args) {
-        // Scanner sc = new Scanner(System.in);
-        PersegiPanjang[][] ppArray = new PersegiPanjang[3][2];
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Masukkan banyak persegi panjang yang ingin di hitung: ");
+        int n = sc.nextInt();
+        PersegiPanjang[] ppArray = new PersegiPanjang[n];
 
-        for(int i = 0; i <ppArray.length; i++){
-            for(int j = 0; j<ppArray[i].length; j++) {
-                ppArray[i][j] = new PersegiPanjang();
-                if(j==1) {
-                    ppArray[i][j].persegiPj = 5*(i+j+1);
-                } else {
-                    ppArray[i][j].persegiPj = 4*(i+1);
-                }
-            }
+        for(int i = 0; i <ppArray.length; i++) {
+            ppArray[i] = new PersegiPanjang();
+            System.out.println("Persegi Panjang ke-" + i);
+            System.out.print("Masukkan panjang: ");
+            ppArray[i].panjang = sc.nextInt();
+            System.out.print("Masukkan lebar: ");
+            ppArray[i].lebar = sc.nextInt();
         }
 
-        for(int i = 0; i < 3; i++) {
-           System.out.println("Persegi Panjang ke-" + (i + 1));
-           for(int j = 0; j <ppArray[0].length; j++) {
-            System.out.print("Panjang: " + ppArray[i][j].persegiPj);j++;
-            System.out.println(", lebar: " + ppArray[i][j].persegiPj);
-           }
+        for(int i = 0; i <ppArray.length; i++) {
+            System.out.println("Persegi Panjang kei" + i);
+            System.out.println("Panjang: " + ppArray[i].panjang + ", lebar: " + ppArray[i].lebar);
         }
     }
 }

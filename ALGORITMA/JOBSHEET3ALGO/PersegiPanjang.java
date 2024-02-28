@@ -2,5 +2,8 @@ package JOBSHEET3ALGO;
 
 public class PersegiPanjang {
 
-    public int persegiPj;
+    public int panjang;
+    public int lebar;
+
+    
 }
