@@ -1,4 +1,4 @@
-package JOBSHEET4ALGO;
+// package JOBSHEET4ALGO;
 
 public class pangkat02 {
     public int nilai;
