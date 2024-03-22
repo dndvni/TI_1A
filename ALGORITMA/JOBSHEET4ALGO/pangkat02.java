@@ -4,6 +4,10 @@ public class pangkat02 {
     public int nilai;
     public int pangkat;
 
+public pangkat02(int a, int n) {
+    this.nilai = a;
+    this.pangkat = n;
+}
     int pangkatBF(int a, int n) {
         int hasil = 1;
         for (int i = 0; i <n; i++) {
