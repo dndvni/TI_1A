@@ -1,4 +1,4 @@
-package JOBSHEET5ALGO;
+//package JOBSHEET5ALGO;
 //import JOBSHEET5ALGO;
 //import JOBSHEET5ALGO.mahasiswa02;
 
@@ -58,7 +58,7 @@ public class DaftarMahasiswaBerprestasi02 {
         for (int i = 1; i < listMhs.length; i++) {
             mahasiswa02 temp = listMhs[i];
             int j = i;
-            while (j > 0 && listMhs[j - 1].ipk > temp.ipk) {
+            while (j > 0 && listMhs[j - 1].ipk < temp.ipk) {
                 listMhs[j] = listMhs[j - 1];
                 j--;
             }
