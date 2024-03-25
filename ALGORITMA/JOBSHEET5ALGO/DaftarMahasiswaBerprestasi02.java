@@ -2,6 +2,8 @@
 //import JOBSHEET5ALGO;
 //import JOBSHEET5ALGO.mahasiswa02;
 
+// import JOBSHEET5ALGO.mahasiswa02;
+
 public class DaftarMahasiswaBerprestasi02 {
     mahasiswa02 listMhs[] = new mahasiswa02[5];
     int idx;
@@ -32,6 +34,23 @@ public class DaftarMahasiswaBerprestasi02 {
                     listMhs[j - 1] = tmp;
                 }
             }
+        }
     }
+
+    void selesctionSort() {
+        for (int i = 0; i  < listMhs.length-1; i++) {
+            int idxMin = 1;
+            for (int j=i+1; j < listMhs.length; j++) {
+                if (listMhs[j].ipk < listMhs[idxMin].ipk) {
+                    idxMin = j;
+                }
+            }
+            // swap
+            mahasiswa02 tmp = listMhs[idxMin];
+            listMhs[idxMin] = listMhs[i];
+            listMhs[i] = tmp;
+        }
+    
+
     }
 }
