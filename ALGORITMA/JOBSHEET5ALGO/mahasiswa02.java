@@ -1,4 +1,4 @@
-package JOBSHEET5ALGO;
+//package JOBSHEET5ALGO;
 
 public class mahasiswa02 {
 
@@ -7,8 +7,8 @@ public class mahasiswa02 {
     int umur;
     double ipk;
 
-    mahasiswa02(String n, int t int u, double i) {
-        nama = i;
+    mahasiswa02(String n, int t, int u, double i) {
+        nama = n;
         thnMasuk = t;
         umur = u;
         ipk = i;
