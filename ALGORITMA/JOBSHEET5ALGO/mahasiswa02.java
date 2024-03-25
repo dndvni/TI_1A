@@ -1,4 +1,4 @@
-//package JOBSHEET5ALGO;
+package JOBSHEET5ALGO;
 
 public class mahasiswa02 {
 

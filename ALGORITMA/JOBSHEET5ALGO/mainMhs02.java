@@ -1,4 +1,4 @@
-//package JOBSHEET5ALGO;
+package JOBSHEET5ALGO;
 //import java.util.Scanner;
 
 //import JOBSHEET5ALGO.DaftarMahasiswaBerprestasi02;
@@ -31,6 +31,9 @@ public class mainMhs02 {
         System.out.println("Data mahasiswa setelah sorting asc berdasarkan ipk");
         list.selesctionSort();
         list.tampil();
-        
+
+        System.out.println("Data mahasiswa setelah sorting asc berdasarkan ipk");
+        list.insertionSort();
+        list.tampil();
     }
 }
