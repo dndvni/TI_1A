@@ -1,4 +1,4 @@
-package JOBSHEET6ALGO;
+// package JOBSHEET6ALGO;
 
 import java.util.Scanner;
 
@@ -44,6 +44,12 @@ public class BukuMain02 {
         System.out.println("menggunakan sequential Search");
         int posisi = data.FindSeqSearch(cari);
         data.tampilPosisi(cari, posisi);
+
+        System.out.println("=======================================");
+        System.out.println("menggunakan binary search");
+        posisi = data.FindBinarySearch(cari, 0, jumBuku -1);
+        data.tampilPosisi(cari, posisi);
+        data.TampilData(cari, posisi);
 
         System.out.println("=======================================");
         System.out.println("=======================================");

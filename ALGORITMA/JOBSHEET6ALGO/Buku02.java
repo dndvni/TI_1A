@@ -1,4 +1,4 @@
-package JOBSHEET6ALGO;
+// package JOBSHEET6ALGO;
 
 public class Buku02 {
     int kodeBuku, tahunTerbit, stok;
