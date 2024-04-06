@@ -1,4 +1,4 @@
-package JOBSHEET7ALGO;
+// package JOBSHEET7ALGO;
 
 public class Gudang02 {
     Barang02[] tumpukan;
