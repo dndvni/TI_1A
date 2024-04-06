@@ -15,15 +15,17 @@ public class Utama02 {
             System.out.println("\nMenu:");
             System.out.println("1. Tambah Barang");
             System.out.println("2. Ambil Barang");
-            System.out.println("3. Tampilkan Tumpukan Barang");
-            System.out.println("4. Tampilkan Barang Teratas");
-            System.out.println("5. Keluar");
+            System.out.println("3. cari Barang");
+            System.out.println("4. Tampilkan Tumpukan Barang");
+            System.out.println("5. Tampilkan Barang Teratas");
+            System.out.println("6. Tampilkan Barang Terbawah");
+            System.out.println("7. Keluar");
             System.out.print("Pilih Operasi: ");
             int pilihan = sc02.nextInt();
 
             switch (pilihan) {
                 case 1 :
-                System.out.println("Masukkan kode barang: ");
+                System.out.print("Masukkan kode barang: ");
                 int kode = sc02.nextInt();
                 sc02.nextLine();
                 System.out.print("Masukkan nama barang: ");
@@ -39,12 +41,29 @@ public class Utama02 {
                 break;
 
                 case 3:
-                gudang.tampilkanBarang();
+                System.out.print("Masukkan Kode Barang: ");
+                int kodeBarang = sc02.nextInt();
+                System.out.print("Masukkan Nama Barang: ");
+                sc02.nextLine(); // Membersihkan newline character dari buffer
+                String namaBarang = sc02.nextLine();
+                Barang02 barangDitemukan = gudang.cariBarang(kodeBarang, namaBarang);
+                if (barangDitemukan != null) {
+                    System.out.println("Barang Dengan Kode " + kodeBarang + " Telah Ditemukan. Kode: " + barangDitemukan.kode + "nama " + barangDitemukan.nama);
+                } else {
+                     System.out.println("Barang Dengan Kode " + kodeBarang + " dan Nama " + namaBarang + " Tidak Ditemukan.");
+                }
                 break;
 
                 case 4:
+                gudang.lihatBarangTeratas();
                 break;
 
+                case 5:
+                gudang.lihatBarangTeratas();
+                break;
+
+                case 6:
+                gudang.lihatBarangTerbawah();
                 default :
                 System.out.println("Pilihan tidak valid. Silahkan coba lagi.");
             }

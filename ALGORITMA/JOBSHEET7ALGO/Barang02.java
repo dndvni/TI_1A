@@ -1,4 +1,4 @@
-// package JOBSHEET7ALGO;
+//package JOBSHEET7ALGO;
 
 public class Barang02 {
 

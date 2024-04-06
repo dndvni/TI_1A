@@ -1,4 +1,4 @@
-// package JOBSHEET7ALGO;
+//package JOBSHEET7ALGO;
 
 public class Gudang02 {
     Barang02[] tumpukan;
@@ -87,4 +87,31 @@ public class Gudang02 {
         }
         return biner;
     }
+    public Barang02 lihatBarangTerbawah() {
+        if (!cekKosong()) {
+            Barang02 barangTerbawah = tumpukan[top];
+            System.out.println("Barang terbawah: " + barangTerbawah.nama);
+            return barangTerbawah;
+        } else {
+            System.out.println("Tumpukan barang kosong");
+            return null;
+        }
+    }
+    public Barang02 cariBarang(int kodeBarang, String namaBarang) {
+    // Berdasarkan Kode
+    for (int i = 0; i <= top; i++) {
+        if (tumpukan[i].kode == kodeBarang) {
+            return tumpukan[i];
+        }
+    }
+    
+    // Berdasarkan Nama 
+    for (int j = 0; j <= top; j++) {
+        if (tumpukan[j].nama.equals(namaBarang)) {
+            return tumpukan[j];
+        }
+    }
+    return null;
+}
+
 }
