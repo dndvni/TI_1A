@@ -1,7 +1,9 @@
 package JOBSHEET9ALGO;
 
+import JOBSHEET9ALGO.Nasabah02;
+
 public class Queue02 {
-    int[] data;
+    Nasabah02[] data;
     int front;
     int rear;
     int size;
@@ -9,7 +11,7 @@ public class Queue02 {
 
     public Queue02(int n) {
         max = n;
-        data = new int[max];
+        data = new Nasabah02[max];
         size = 0;
         front = rear = -1;
     }
@@ -32,7 +34,8 @@ public class Queue02 {
 
     public void peek() {
         if (!IsEmpty()) {
-            System.out.println("Elemen terdepan: " + data[front]);
+            System.out.println("Elemen terdepan: " + data[front].norek + " " + data[front].nama 
+            + " " + data[front].alamat + " " + data[front].umur + " " + data[front].saldo);
         } else {
             System.out.println("Queue masih kosong");
         }
@@ -44,10 +47,12 @@ public class Queue02 {
         } else {
             int i = front;
             while (i != rear) {
-                System.out.print(data[i] + " ");
+                System.out.print(data[i].norek + " " + data[i].nama
+                        + " " + data[i].alamat + " " + data[i].umur + " " + data[i].saldo);
                 i = (i + 1) % max;
             }
-            System.out.println(data[i] + " ");
+            System.out.println(data[i].norek + " " + data[i].nama
+                + " " + data[i].alamat + " " + data[i].umur + " " + data[i].saldo);
             System.out.println("Jumlah elemen = " + size);
         }
     }
@@ -62,10 +67,9 @@ public class Queue02 {
         }
     }
 
-    public void Enqueue(int dt) {
+    public void Enqueue(Nasabah02 dt) {
         if (IsFull()) {
             System.out.println("Queue sudah penuh");
-            System.exit(0);
         } else {
             if (IsEmpty()) {
                 front = rear = 0;
@@ -81,11 +85,10 @@ public class Queue02 {
         }
     }
 
-    public int Dequeue() {
-        int dt = 0;
+    public Nasabah02 Dequeue() {
+        Nasabah02 dt = new Nasabah02();
         if (IsEmpty()) {
             System.out.println("Queue masih kosong");
-            System.exit(0);
         } else {
             dt = data[front];
             size--;
@@ -102,13 +105,14 @@ public class Queue02 {
         return dt;
     }
 
-    public static void menu() {
-        System.out.println("Masukkan operasi yang diinginkan:");
-        System.out.println("1. Enqueue");
-        System.out.println("2. Dequeue");
-        System.out.println("3. Print");
-        System.out.println("4. Peek");
-        System.out.println("5. Clear");
-        System.out.println("--------------------");
+    public void peekRear() {
+        if (!IsEmpty()) {
+            System.out.println("Elemen paling belakang: " + data[rear].norek + " " + data[rear].nama
+                + " " + data[rear].alamat + " " + data[rear].umur + " " + data[rear].saldo);
+        } else {
+            System.out.println("Queue Masih Kosong");
+        }
     }
+
+    
 }
