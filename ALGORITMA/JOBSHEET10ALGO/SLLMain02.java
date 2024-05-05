@@ -5,29 +5,19 @@ public class SLLMain02 {
 
         SingleLinkedList02 singLL = new SingleLinkedList02();
         singLL.print();
-        singLL.addFirst(890);
+        singLL.addFirst(new Mahasiswa02(111, "Anton"));
         singLL.print();
-        singLL.addLast(760);
+        singLL.addLast(new Mahasiswa02(112, "Prita"));
         singLL.print();
-        singLL.addFirst(700);
+        singLL.insertAfter(112, new Mahasiswa02(113, "Yusuf"));
         singLL.print();
-        singLL.insertAfter(700, 999);
+        singLL.insertAfter(113, new Mahasiswa02(114, "Doni"));
         singLL.print();
-        singLL.insertAt(3, 833);
+        singLL.insertAt(4, new Mahasiswa02(115, "Sari"));
         singLL.print();
 
 
-        System.out.println("Data pada indeks ke-1=" + singLL.getData(1));
-        System.out.println("Data 3 berada pada indeks ke-" + singLL.indexOf(760));
-
-        singLL.remove(999);
-        singLL.print();
-        singLL.removeAt(0);
-        singLL.print();
-        singLL.removeFirst();
-        singLL.print();
-        singLL.removeLast();
-        singLL.print();
+        
        
     }
 }
