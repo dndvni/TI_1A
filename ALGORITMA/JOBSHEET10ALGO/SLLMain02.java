@@ -1,4 +1,4 @@
-// package JOBSHEET10ALGO;
+package JOBSHEET10ALGO;
 
 public class SLLMain02 {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-// package JOBSHEET10ALGO;
+package JOBSHEET10ALGO;
 
 public class SingleLinkedList02 {
     Node02 head, tail;
