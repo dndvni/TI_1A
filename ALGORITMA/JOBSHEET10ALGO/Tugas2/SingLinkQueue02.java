@@ -21,6 +21,17 @@ public class SingLinkQueue02 {
         }
     }
 
+    void addLast(Mahasiswa02 data) {
+        Node02 nd02 = new Node02(data, null);
+        if(isEmpty()) {
+            front = nd02;
+            rear = nd02;
+        } else {
+            rear.next = nd02;
+            rear = nd02;
+        }
+    }
+
     void Enqueue(Mahasiswa02 data) {
         Node02 nd02 = new Node02(data, null);
         if (isEmpty()) {
